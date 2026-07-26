@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540">
+<rect width="920" height="540" rx="24" fill="#F4F8FC"/>
+<rect x="70" y="60" width="780" height="420" rx="18" fill="white" stroke="#DCE8F3" stroke-width="3"/>
+<rect x="70" y="60" width="780" height="54" rx="18" fill="#0F7BEA"/>
+<text x="460" y="166" text-anchor="middle" font-family="Arial" font-weight="700" font-size="28" fill="#082C5F">Allow screen sharing</text>
+<text x="460" y="218" text-anchor="middle" font-family="Arial" font-size="20" fill="#5F7388">Quick Assist will ask whether you want to share your screen.</text>
+<rect x="250" y="277" width="190" height="64" rx="14" fill="#E8EEF4"/>
+<text x="345" y="317" text-anchor="middle" font-family="Arial" font-weight="700" font-size="21" fill="#5F7388">Cancel</text>
+<rect x="480" y="277" width="190" height="64" rx="14" fill="#0F7BEA"/>
+<text x="575" y="317" text-anchor="middle" font-family="Arial" font-weight="700" font-size="21" fill="white">Allow</text>
+<text x="460" y="411" text-anchor="middle" font-family="Arial" font-size="18" fill="#18324A">You remain in control and can end the session at any time.</text>
+</svg>

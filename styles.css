@@ -1,0 +1,628 @@
+
+:root{--blue:#0F7BEA;--navy:#082C5F;--ink:#18324A;--muted:#5F7388;--soft:#F4F8FC;--line:#DCE8F3;--white:#fff;--green:#1F9D55;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);font-size:18px;line-height:1.62;background:#fff}img{max-width:100%;height:auto;display:block}a{color:var(--blue)}.container{width:min(calc(100% - 32px),var(--max));margin:auto}.narrow{max-width:900px}.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:16px;top:16px;background:#fff;padding:10px;z-index:999;border:2px solid var(--blue)}
+.site-header{position:sticky;top:0;z-index:20;background:#fffffff2;border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}.header-inner{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand img{width:116px;margin:-14px 0}.nav{display:flex;gap:20px;align-items:center;font-size:16px;font-weight:700}.nav a{text-decoration:none;color:var(--navy)}.nav a:hover{color:var(--blue)}.nav-cta{background:var(--blue);color:#fff!important;padding:9px 14px;border-radius:999px}
+.hero,.page-hero{position:relative;overflow:hidden;background:url('assets/pattern-tech.svg') right -120px top -120px/760px auto no-repeat,radial-gradient(circle at 86% 25%,#0F7BEA1f,transparent 28%),linear-gradient(#fff,#F8FBFF)}.hero{padding:86px 0 70px}.page-hero{padding:62px 0 44px}.hero-grid{display:grid;grid-template-columns:1.3fr .85fr;gap:46px;align-items:center}.eyebrow{color:var(--blue);font-weight:800;margin:0 0 8px}.lead{font-size:clamp(21px,2.4vw,28px);color:var(--muted)}.support-line{font-size:16px;font-weight:700;color:var(--navy)}
+h1,h2,h3{color:var(--navy);line-height:1.15;margin-top:0}h1{font-size:clamp(42px,6vw,70px);letter-spacing:-.03em;margin-bottom:18px}h1 span{color:var(--blue)}h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.02em}h3{font-size:23px}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:11px 17px;border-radius:11px;text-decoration:none;font-weight:800;border:2px solid transparent;cursor:pointer}.primary{background:var(--blue);color:#fff}.whatsapp{background:var(--green);color:#fff}.secondary{border-color:var(--blue);background:#fff;color:var(--navy)}.light{background:#fff;color:var(--navy);border-color:#ffffffaa}.small{font-size:16px;color:var(--muted)}
+.card,.contact-card,.services article,.notice{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 28px #082C5F12}.card{padding:28px}.ticks{list-style:none;padding:0}.ticks li{position:relative;padding-left:28px;margin:9px 0}.ticks li:before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:bold}
+.price-strip{background:var(--navy);color:#fff;padding:18px 0}.price-strip-inner{display:grid;grid-template-columns:repeat(3,1fr) auto auto;gap:18px;align-items:center}.price-strip-inner div{display:flex;flex-direction:column}.price-strip-inner strong{font-size:17px}.price-strip-inner span{font-size:13px;color:#CFE0F5}
+.section{padding:74px 0}.soft{background:url('assets/pattern-tech.svg') left -350px bottom -250px/700px auto no-repeat,var(--soft)}.grid{display:grid;gap:20px}.services{grid-template-columns:repeat(4,1fr)}.services article{padding:23px}.services article p{margin-bottom:0}.split{display:grid;grid-template-columns:1.2fr .85fr;gap:42px;align-items:start}.contact{padding-top:28px}.contact-card{padding:30px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;background:url('assets/pattern-tech.svg') right -380px center/650px auto no-repeat,#fff}
+.site-footer{background:var(--navy);color:#fff;padding:28px 0;font-size:14px}.footer-inner{display:grid;grid-template-columns:auto auto 1fr;gap:30px;align-items:start}.footer-links{display:flex;gap:14px;flex-wrap:wrap}.footer-links a{color:#fff}.footer-meta{text-align:right;color:#CFE0F5;display:flex;flex-direction:column}
+.legal-main .section{padding-top:52px}.legal-copy h2{margin-top:34px;font-size:27px}.legal-copy li{margin-bottom:8px}.notice{padding:18px 20px;background:#F5FAFF;box-shadow:none;border-left:5px solid var(--blue);margin:20px 0}.price-table{width:100%;border-collapse:collapse;margin:20px 0 34px}.price-table th,.price-table td{text-align:left;padding:13px 14px;border:1px solid var(--line)}.price-table th{background:var(--navy);color:#fff}.price-table tr:nth-child(even) td{background:var(--soft)}.price-table td:last-child{font-weight:bold;white-space:nowrap}.form-line{height:34px;border-bottom:1px solid #8fa2b6;margin:5px 0 14px}.short-line{max-width:300px}
+@media(max-width:1000px){.services{grid-template-columns:repeat(2,1fr)}.price-strip-inner{grid-template-columns:repeat(2,1fr)}.footer-inner{grid-template-columns:1fr}.footer-meta{text-align:left}}
+@media(max-width:880px){.nav a:not(.nav-cta){display:none}.hero-grid,.split,.contact-card{grid-template-columns:1fr}.price-strip-inner{grid-template-columns:1fr}.price-strip-inner .btn{width:100%}}
+@media(max-width:620px){body{font-size:17px}.brand img{width:100px}.hero{padding-top:54px}.services{grid-template-columns:1fr}.btn{width:100%}.page-hero h1{font-size:42px}.price-table{font-size:15px}.price-table th,.price-table td{padding:10px 8px}}
+@media print{.site-header,.site-footer,.no-print{display:none!important}.page-hero{padding:15px 0;background:none}.section{padding:15px 0}.printable{max-width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* --- Ask Steve animated enhancements --- */
+body {
+  overflow-x: hidden;
+}
+
+.hero,
+.page-hero {
+  isolation: isolate;
+}
+
+.hero::before,
+.page-hero::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border-radius: 50%;
+  right: -180px;
+  top: -220px;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(15,123,234,.20), rgba(15,123,234,.06) 48%, transparent 70%),
+    radial-gradient(circle at 70% 65%, rgba(50,205,200,.14), transparent 58%);
+  filter: blur(18px);
+  animation: askSteveSwirlA 22s ease-in-out infinite alternate;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.hero::after,
+.page-hero::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 46% 54% 62% 38% / 44% 38% 62% 56%;
+  left: -220px;
+  bottom: -260px;
+  background:
+    radial-gradient(circle at 60% 40%, rgba(8,44,95,.12), rgba(15,123,234,.08) 45%, transparent 70%);
+  filter: blur(24px);
+  animation: askSteveSwirlB 28s linear infinite;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.hero-grid,
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-card {
+  animation: askSteveFloatCard 9s ease-in-out infinite;
+}
+
+.services article,
+.card,
+.contact-card,
+.price-table,
+.notice {
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.services article:hover,
+.card:hover,
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(8,44,95,.14);
+  border-color: rgba(15,123,234,.28);
+}
+
+.brand img {
+  transition: transform .35s ease;
+}
+.brand:hover img {
+  transform: scale(1.025) rotate(-1deg);
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(8,44,95,.14);
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -140%;
+  width: 80%;
+  transform: skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+  transition: left .65s ease;
+}
+.btn:hover::after {
+  left: 160%;
+}
+
+.price-strip {
+  position: relative;
+  overflow: hidden;
+}
+.price-strip::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    conic-gradient(from 0deg at 50% 50%, rgba(15,123,234,.12), rgba(50,205,200,.08), rgba(15,123,234,.12), transparent 65%);
+  animation: askSteveRotate 34s linear infinite;
+  pointer-events: none;
+}
+.price-strip-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.soft {
+  position: relative;
+  overflow: hidden;
+}
+.soft::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -160px;
+  top: 12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(15,123,234,.08), transparent 68%);
+  animation: askSteveDrift 18s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.soft > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+}
+.contact-card::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  top: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(15,123,234,.12), transparent 70%);
+  animation: askStevePulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+.contact-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes askSteveSwirlA {
+  0%   { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+  50%  { transform: translate3d(-45px,35px,0) scale(1.08) rotate(14deg); }
+  100% { transform: translate3d(35px,70px,0) scale(.96) rotate(-10deg); }
+}
+
+@keyframes askSteveSwirlB {
+  0%   { transform: rotate(0deg) translate3d(0,0,0); }
+  50%  { transform: rotate(180deg) translate3d(24px,-20px,0); }
+  100% { transform: rotate(360deg) translate3d(0,0,0); }
+}
+
+@keyframes askSteveFloatCard {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-7px); }
+}
+
+@keyframes askSteveRotate {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes askSteveDrift {
+  from { transform: translate3d(0,0,0) scale(1); }
+  to   { transform: translate3d(-55px,28px,0) scale(1.12); }
+}
+
+@keyframes askStevePulse {
+  0%,100% { transform: scale(.96); opacity: .65; }
+  50%     { transform: scale(1.08); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+
+/* --- V5: gentle animated hero background --- */
+.hero {
+  background-size: 760px auto, auto, auto;
+  animation: askSteveHeroBackdrop 26s ease-in-out infinite alternate;
+}
+
+.hero::before {
+  animation: askSteveSwirlA 18s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  animation: askSteveSwirlB 24s linear infinite;
+}
+
+@keyframes askSteveHeroBackdrop {
+  0% {
+    background-position: right -120px top -120px, 86% 25%, 0 0;
+    filter: saturate(100%);
+  }
+  50% {
+    background-position: right -90px top -80px, 82% 22%, 0 0;
+    filter: saturate(108%);
+  }
+  100% {
+    background-position: right -150px top -150px, 90% 28%, 0 0;
+    filter: saturate(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none !important;
+  }
+}
+
+
+/* --- V6: restrained interaction and polish refinements --- */
+
+/* Strong, accessible keyboard focus states */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid rgba(15,123,234,.38);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Give key headings a tiny branded accent without changing layout */
+.section > .container > .eyebrow + h2,
+.section .narrow > .eyebrow + h2 {
+  position: relative;
+}
+.section > .container > .eyebrow + h2::after,
+.section .narrow > .eyebrow + h2::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 4px;
+  margin-top: 13px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue), rgba(15,123,234,.18));
+  transform-origin: left center;
+  animation: askSteveAccentBreathe 7s ease-in-out infinite;
+}
+
+/* Service icon animation: deliberately tiny and only triggered on interaction */
+.services article h3 {
+  transform-origin: left center;
+  transition: transform .28s ease;
+}
+.services article:hover h3 {
+  transform: translateX(3px);
+}
+
+/* Gently animate only the emoji/icon glyph at the start of service headings */
+.services article:hover h3::first-letter {
+  transform: translateY(-2px);
+}
+
+/* Add a soft moving highlight across service cards */
+.services article {
+  position: relative;
+  overflow: hidden;
+}
+.services article::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(115deg, transparent 20%, rgba(15,123,234,.045) 45%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform .85s ease;
+  pointer-events: none;
+}
+.services article:hover::after {
+  transform: translateX(120%);
+}
+
+/* Calm visual response for price cards / strip */
+.price-strip-inner strong {
+  transition: color .25s ease, transform .25s ease;
+}
+.price-strip-inner > div:hover strong {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Slightly more dimensional FAQ interaction without altering visual style */
+details {
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+details:hover {
+  border-color: rgba(15,123,234,.28);
+  box-shadow: 0 10px 24px rgba(8,44,95,.08);
+  transform: translateY(-2px);
+}
+
+/* Scroll-reveal state. JS only adds .reveal; without JS content remains visible. */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity .7s ease,
+    transform .7s cubic-bezier(.22,.61,.36,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: .08s; }
+.reveal-delay-2 { transition-delay: .16s; }
+.reveal-delay-3 { transition-delay: .24s; }
+
+/* Small floating contact tab on larger screens; same contact details, no new UX model */
+.quick-contact {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 15;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid rgba(15,123,234,.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 10px 28px rgba(8,44,95,.13);
+  backdrop-filter: blur(8px);
+  transform: translateY(0);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.quick-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(8,44,95,.16);
+}
+.quick-contact a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 999px;
+  padding: 9px 12px;
+}
+.quick-contact .qc-call { background: var(--blue); color: #fff; }
+.quick-contact .qc-wa { background: var(--green); color: #fff; }
+
+@keyframes askSteveAccentBreathe {
+  0%,100% { transform: scaleX(1); opacity: .9; }
+  50% { transform: scaleX(1.12); opacity: 1; }
+}
+
+@media (max-width: 760px) {
+  .quick-contact {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    justify-content: center;
+  }
+  .quick-contact a {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .section > .container > .eyebrow + h2::after,
+  .section .narrow > .eyebrow + h2::after {
+    animation: none !important;
+  }
+}
+
+
+/* --- V7: button icons and stronger 3D treatment --- */
+.btn,
+.quick-contact a {
+  gap: 8px;
+  box-shadow:
+    0 4px 0 rgba(8,44,95,.18),
+    0 8px 18px rgba(8,44,95,.14);
+  transform: translateY(0);
+}
+
+.btn:hover,
+.quick-contact a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 rgba(8,44,95,.16),
+    0 12px 24px rgba(8,44,95,.18);
+}
+
+.btn:active,
+.quick-contact a:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 rgba(8,44,95,.18),
+    0 5px 12px rgba(8,44,95,.12);
+}
+
+.btn-icon {
+  width: 1.05em;
+  height: 1.05em;
+  display: inline-block;
+  flex: 0 0 auto;
+  vertical-align: -0.12em;
+}
+
+.btn-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+
+/* --- V8: moving navigation indicator + stronger hero ambience --- */
+
+/* Animated blue indicator that slides beneath the currently active nav item. */
+.nav {
+  position: relative;
+  --indicator-left: 0px;
+  --indicator-width: 0px;
+  --indicator-opacity: 0;
+}
+
+.nav::after {
+  content: "";
+  position: absolute;
+  left: var(--indicator-left);
+  bottom: -8px;
+  width: var(--indicator-width);
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0F7BEA, #45A7FF);
+  opacity: var(--indicator-opacity);
+  box-shadow: 0 2px 8px rgba(15,123,234,.28);
+  transition:
+    left .34s cubic-bezier(.22,.61,.36,1),
+    width .34s cubic-bezier(.22,.61,.36,1),
+    opacity .2s ease;
+  pointer-events: none;
+}
+
+.nav a.nav-active {
+  color: var(--blue);
+}
+
+/* Make the hero motion clearer without turning it into a flashy animation. */
+.hero {
+  background:
+    url('assets/pattern-tech.svg') right -110px top -105px / 780px auto no-repeat,
+    radial-gradient(circle at 84% 22%, rgba(15,123,234,.17), transparent 31%),
+    radial-gradient(circle at 68% 78%, rgba(53,205,196,.10), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+  animation: askSteveHeroBackdropV8 19s ease-in-out infinite alternate;
+}
+
+.hero::before {
+  width: 700px;
+  height: 700px;
+  right: -175px;
+  top: -245px;
+  background:
+    radial-gradient(circle at 34% 34%, rgba(15,123,234,.30), rgba(15,123,234,.10) 47%, transparent 69%),
+    radial-gradient(circle at 72% 66%, rgba(53,205,196,.22), transparent 57%);
+  filter: blur(13px);
+  opacity: .92;
+  animation: askSteveSwirlV8A 16s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  width: 610px;
+  height: 610px;
+  left: -240px;
+  bottom: -300px;
+  background:
+    radial-gradient(circle at 60% 40%, rgba(8,44,95,.16), rgba(15,123,234,.11) 46%, transparent 70%);
+  filter: blur(18px);
+  opacity: .85;
+  animation: askSteveSwirlV8B 23s linear infinite;
+}
+
+/* A subtle animated wash over the hero, kept behind all content. */
+.hero .hero-grid::before {
+  content: "";
+  position: absolute;
+  width: 440px;
+  height: 260px;
+  right: 8%;
+  top: 18%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(15,123,234,.10), transparent 68%);
+  filter: blur(16px);
+  animation: askSteveHeroGlowV8 11s ease-in-out infinite alternate;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes askSteveHeroBackdropV8 {
+  0% {
+    background-position:
+      right -110px top -105px,
+      84% 22%,
+      68% 78%,
+      0 0;
+  }
+  50% {
+    background-position:
+      right -65px top -72px,
+      79% 26%,
+      72% 72%,
+      0 0;
+  }
+  100% {
+    background-position:
+      right -145px top -138px,
+      89% 19%,
+      64% 82%,
+      0 0;
+  }
+}
+
+@keyframes askSteveSwirlV8A {
+  0%   { transform: translate3d(0,0,0) scale(1) rotate(0deg); }
+  50%  { transform: translate3d(-62px,48px,0) scale(1.10) rotate(18deg); }
+  100% { transform: translate3d(44px,86px,0) scale(.97) rotate(-12deg); }
+}
+
+@keyframes askSteveSwirlV8B {
+  0%   { transform: rotate(0deg) translate3d(0,0,0) scale(1); }
+  50%  { transform: rotate(180deg) translate3d(30px,-24px,0) scale(1.08); }
+  100% { transform: rotate(360deg) translate3d(0,0,0) scale(1); }
+}
+
+@keyframes askSteveHeroGlowV8 {
+  from { transform: translate3d(-18px,4px,0) scale(.96); opacity: .55; }
+  to   { transform: translate3d(32px,20px,0) scale(1.10); opacity: .95; }
+}
+
+@media (max-width: 880px) {
+  /* The mobile nav hides most section links, so the moving indicator is disabled there. */
+  .nav::after { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav::after {
+    transition: none !important;
+  }
+  .hero,
+  .hero::before,
+  .hero::after,
+  .hero .hero-grid::before {
+    animation: none !important;
+  }
+}
+
+/* --- V9 Remote Support page --- */
+.text-link{font-weight:800;text-decoration:none}.text-link:hover{text-decoration:underline}
+.remote-hero h1 span{color:var(--blue)}
+.remote-steps{display:grid;gap:26px;margin-top:30px}
+.remote-step{display:grid;grid-template-columns:56px minmax(0,.85fr) minmax(320px,1.15fr);gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 28px #082C5F10}
+.remote-step img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.step-number{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--blue);color:white;font-size:23px;font-weight:800;box-shadow:0 5px 14px #0F7BEA35}
+.step-copy h3{margin-bottom:8px}
+@media(max-width:900px){.remote-step{grid-template-columns:52px 1fr}.remote-step img{grid-column:1/-1}}
+@media(max-width:600px){.remote-step{grid-template-columns:1fr}.step-number{width:44px;height:44px}.remote-step img{grid-column:auto}}
+
+/* --- V10: service-area map on Prices page --- */
+.travel-map-card {
+  margin: 20px 0 14px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(8,44,95,.10);
+  overflow: hidden;
+}
+.travel-map-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}

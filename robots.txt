@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://askstevenow.co.uk/sitemap.xml

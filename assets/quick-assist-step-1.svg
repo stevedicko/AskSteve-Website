@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540">
+<rect width="920" height="540" rx="24" fill="#F4F8FC"/>
+<rect x="70" y="60" width="780" height="420" rx="18" fill="white" stroke="#DCE8F3" stroke-width="3"/>
+<rect x="70" y="60" width="780" height="54" rx="18" fill="#0F7BEA"/>
+<circle cx="104" cy="87" r="7" fill="white" opacity=".85"/><circle cx="128" cy="87" r="7" fill="white" opacity=".55"/>
+<text x="460" y="166" text-anchor="middle" font-family="Arial" font-weight="700" font-size="28" fill="#082C5F">Open Quick Assist</text>
+<rect x="220" y="205" width="480" height="62" rx="12" fill="#F4F8FC" stroke="#BBD5EE"/>
+<text x="250" y="244" font-family="Arial" font-size="23" fill="#5F7388">Search:  Quick Assist</text>
+<rect x="327" y="306" width="266" height="64" rx="14" fill="#0F7BEA"/>
+<text x="460" y="346" text-anchor="middle" font-family="Arial" font-weight="700" font-size="22" fill="white">Open Quick Assist</text>
+<text x="460" y="424" text-anchor="middle" font-family="Arial" font-size="18" fill="#5F7388">Or press Ctrl + Windows key + Q</text>
+</svg>
