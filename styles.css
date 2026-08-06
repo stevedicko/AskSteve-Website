@@ -626,3 +626,45 @@ details:hover {
   height: auto;
   border-radius: 12px;
 }
+
+/* --- Social and corporate identity links --- */
+.business-it-content {
+  display: grid;
+  grid-template-columns: minmax(200px, 260px) 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-top: 28px;
+}
+.business-logo-link {
+  display: inline-block;
+  width: fit-content;
+  border-radius: 10px;
+}
+.business-logo {
+  display: block;
+  width: min(260px, 100%);
+  height: auto;
+}
+.footer-links .facebook-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer-social-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 700px) {
+  .business-it-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .business-logo {
+    width: min(240px, 100%);
+  }
+  .site-footer {
+    padding-bottom: 105px;
+  }
+}
