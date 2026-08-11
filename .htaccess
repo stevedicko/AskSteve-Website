@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect /index.html directly to the preferred homepage
+RewriteCond %{THE_REQUEST} \s/+index\.html(?:[?\s]) [NC]
+RewriteRule ^index\.html$ https://askstevenow.co.uk/ [R=301,L]
+
+# Force HTTPS and remove www
+RewriteCond %{ENV:HTTPS} !on [OR]
+RewriteCond %{HTTP_HOST} !^askstevenow\.co\.uk$ [NC]
+RewriteRule ^(.*)$ https://askstevenow.co.uk/$1 [R=301,L]
