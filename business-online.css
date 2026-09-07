@@ -1,0 +1,219 @@
+/* Page-specific styles for Get your business online. */
+.business-online-page .package-grid,
+.business-online-page .included-grid,
+.business-online-page .business-steps {
+  display: grid;
+  gap: 20px;
+}
+
+.business-online-page .package-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  margin-top: 30px;
+}
+
+.business-online-page .package-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.business-online-page .package-card--recommended {
+  border: 2px solid var(--blue);
+  box-shadow: 0 14px 34px rgba(15,123,234,.16);
+}
+
+.business-online-page .package-kicker {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  margin: 0 0 5px;
+  text-transform: uppercase;
+}
+
+.business-online-page .package-card h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.business-online-page .package-price {
+  color: var(--navy);
+  margin: 4px 0 14px;
+}
+
+.business-online-page .package-price strong {
+  font-size: 38px;
+  line-height: 1;
+}
+
+.business-online-page .package-price span {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.business-online-page .package-card .price-table {
+  margin: 12px 0 24px;
+}
+
+.business-online-page .package-card .price-table th,
+.business-online-page .package-card .price-table td {
+  vertical-align: top;
+}
+
+.business-online-page .price-table td:last-child {
+  white-space: normal;
+}
+
+.business-online-page .package-card .btn {
+  margin-top: auto;
+}
+
+.business-online-page .included-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 30px;
+}
+
+.business-online-page .included-card {
+  padding: 24px;
+}
+
+.business-online-page .included-card h3 {
+  font-size: 24px;
+}
+
+.business-online-page .included-card p:last-child,
+.business-online-page .support-list p:last-child {
+  margin-bottom: 0;
+}
+
+.business-online-page .business-steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 28px;
+}
+
+.business-online-page .business-step {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 16px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 10px 28px #082C5F10;
+  padding: 24px;
+}
+
+.business-online-page .business-step h3 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.business-online-page .step-number {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 5px 14px #0F7BEA35;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.business-online-page .support-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.business-online-page .support-item {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+
+.business-online-page .support-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.business-online-page .support-item h3 {
+  font-size: 23px;
+  margin-bottom: 6px;
+}
+
+.business-online-page .discount-note {
+  background: #F5FAFF;
+  border-left: 5px solid var(--blue);
+  border-radius: 12px;
+  margin: 22px 0 0;
+  padding: 17px 20px;
+}
+
+.business-online-page .discount-note p:last-child {
+  margin-bottom: 0;
+}
+
+.business-online-page .table-wrap {
+  overflow-x: auto;
+  margin: 22px 0 30px;
+}
+
+.business-online-page .table-wrap .price-table {
+  margin: 0;
+  min-width: 560px;
+}
+
+.business-online-page .table-caption {
+  caption-side: top;
+  color: var(--navy);
+  font-size: 20px;
+  font-weight: 800;
+  padding: 0 0 10px;
+  text-align: left;
+}
+
+.business-online-page .business-note {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.business-online-page .anchor-heading {
+  scroll-margin-top: 112px;
+}
+
+.business-online-page .enquire-card {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .business-online-page .included-grid,
+  .business-online-page .business-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .business-online-page .package-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-online-page .package-card,
+  .business-online-page .included-card,
+  .business-online-page .business-step {
+    padding: 23px;
+  }
+
+  .business-online-page .package-price strong {
+    font-size: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .business-online-page .business-step,
+  .business-online-page .package-card {
+    transition: none;
+  }
+}
